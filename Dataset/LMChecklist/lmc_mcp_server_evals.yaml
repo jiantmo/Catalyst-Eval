@@ -53,7 +53,6 @@
       issue
     level: critical
 - query: create purchase requisition in legal entity "USMF" with name "PR test 001"
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
@@ -61,7 +60,6 @@
   - error_handling
 - query: Share the list of item numbers in the product catalog for which i have access
     to create purchase requisition in legal entity USMF
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
@@ -69,7 +67,6 @@
   - error_handling
 - query: For purchase requisition 000081 in legal entity USMF, Add item C0001 with
     10 quantity and C0002 with 20 quantity
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
@@ -77,21 +74,18 @@
   - error_handling
 - query: For purchase requisition 000082 in legal entity USMF, add procurement category
     as "cleaning" with quantity 5
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Submit the purchase requisition 000081 in legal entity USMF for approval
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Share the current status of the purchase requisition number 000081
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
@@ -99,7 +93,6 @@
   - error_handling
 - query: I wish to recall the purchase requisition 000081 submitted for approval and
     update the status to draft
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
@@ -107,14 +100,12 @@
   - error_handling
 - query: In the purchase requisition 000083 in legal entity "USMF", remove the line
     with item number C0001 and replace it with item number C0003 with quantity 10
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Approve the purchase requisition
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
@@ -122,7 +113,6 @@
   - error_handling
 - query: Release approved purchase requisition number 000083 and create a new purchase
     order for this requisition 000083 in USMF
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
@@ -130,14 +120,12 @@
   - error_handling
 - query: Share the purchase order reference for the approved purchase requisition number
     000081
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Confirm the purchase order 000000200 for this vendor US-111
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
@@ -145,7 +133,6 @@
   - error_handling
 - query: post the product receipt for this purchase order 00000200 for vendor US-111
     and use product receipt number as PR-270126-01
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
@@ -153,112 +140,96 @@
   - error_handling
 - query: Post the invoice for the purchase order 00000200 with invoice number IN-270126-001
     and invoice date as 26-01-2026
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: cancel the approved purchase requisition 000056 from USMF legal entity
-  segment: Procurement & Sourcing (Requisition to Reciept)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Show me what makes up GL account 1110 for this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: What are the top drivers hitting GL account 6110 this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Break down GL account 1300 by department for this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Show me the vendor invoices behind postings to GL account 2010 for this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Open the source document for voucher 000123
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: What document caused the posting to GL account 1650 on 1 15 2026
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: What is still unposted for this period that could impact the trial balance
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Is there anything unposted that will hit GL account 6110 this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Do I have any unposted activity left for this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: When was the trial balance last calculated for this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: What exactly is included in the trial balance for this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Do I need to recalculate the trial balance for this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Why did GL account 4010 change from last period to this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Walk me through what happened on GL account 1305 this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
@@ -266,14 +237,12 @@
   - error_handling
 - query: Take me from trial balance to the journal entries for GL account 1110 this
     period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Show me where the balance in GL account 6100 is coming from this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
@@ -281,56 +250,48 @@
   - error_handling
 - query: Open the source documents for the largest postings to GL account 2010 this
     period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: My trial balance does not balance for this period, what should I check first
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Before I recalculate, what do I need to verify for this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Is there a posting failure affecting this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: For audit, what trial balance snapshot should I reference for this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: What posted after the last trial balance snapshot for this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Show me the journal entries for vouchers 000123 and 000124
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
   - tool_selection
   - error_handling
 - query: Give me a reconciliation summary for GL account 1110 for this period
-  segment: Record to report (Trial Balance)
   tags:
   - groundedness
   - task_completion
