@@ -1,0 +1,2347 @@
+- tag: structure
+  metric: true
+  assertions:
+  - text: 'response presents the most relevant key information first: a concise summary
+      directly answering the question followed by detail only as needed'
+    level: critical
+  - text: response is well-structured and organized (uses clear hierarchy via headings,
+      paragraphs, lists, tables, etc., as appropriate)
+    level: critical
+- tag: recency
+  metric: true
+  assertions:
+  - text: response anchors time-sensitive data to specific dates/times (e.g., 'as
+      of Nov 14') rather than relative terms like 'currently' or 'today'
+    level: critical
+  - text: response includes the date of the source for news, reports, or market data
+    level: critical
+  - text: response aligns the recency of the data with the user's intent (e.g., latest
+      quote for 'current price' vs. historical data for trends)
+    level: critical
+- tag: financialperformance&financialhealth_depth
+  metric: true
+  assertions:
+  - text: response includes key financial metrics (e.g., margins, revenue, income,
+      EPS, EBITDA, ROE)
+    level: critical
+  - text: response includes period-over-period comparisons (e.g., YoY, QoQ, trend,
+      growth rate)
+    level: critical
+  - text: response includes causal explanation (e.g., drivers of change, root causes,
+      external influences)
+    level: critical
+- tag: geographic&governmentalinsights_depth
+  metric: true
+  assertions:
+  - text: topics related to geographic performance should contain geographic segment
+      analysis (e.g., performance by region, market exposure, regional growth differences)
+    level: critical
+  - text: topics related to geographic dynamics should contain identification of geographic-specific
+      drivers of change such as regional demand shifts, regulatory or policy changes,
+      local macroeconomic factors, geopolitical events, or government actions
+    level: critical
+  - text: topics involving geographic comparisons should contain material cross-region
+      differences (e.g., regional outperformance or underperformance, localized risks
+      or opportunities)
+    level: critical
+- tag: investor&fundinglandscape_depth
+  metric: true
+  assertions:
+  - text: response contains company guidance and forecasts, expected future trends,
+      strategic direction, and identified risks/opportunities
+    level: critical
+  - text: response includes key financial metrics (e.g., margins, revenue, income,
+      EPS, EBITDA, ROE)
+    level: critical
+- tag: peers&competitivepositioning_depth
+  metric: true
+  assertions:
+  - text: response includes peer/competitor comparisons (e.g., industry benchmarking,
+      market share analysis)
+    level: critical
+- tag: product&serviceintelligence_depth
+  metric: true
+  assertions:
+  - text: response contains product or service or business-unit information (e.g.,
+      category performance, feature set, segment dynamics)
+    level: critical
+  - text: response includes period-over-period comparisons (e.g., YoY, QoQ, trend,
+      growth rate)
+    level: critical
+- query: Can you outline Coca-Cola’s global market share trends across its major beverage
+    categories?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: Can you provide a breakdown of T-Mobile US’s key business segments and revenue
+    sources?
+  tags:
+  - structure
+  - recency
+- query: What is IBM’s global revenue breakdown by business segment?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What regions generate the most revenue for Goldman Sachs?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has NVIDIA's year-over-year gross margin trended, and what factors contributed
+    to the changes?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Broadcom's operating margin trended over the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Tesla’s automotive gross margin trended over the past four quarters?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did Berkshire Hathaway's net income change between 2023 and 2024?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Walmart’s e-commerce growth impacted overall profit margins in the
+    last fiscal year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Visa’s transaction volume influenced revenue growth in the past quarter?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did Eli Lilly’s profit margins change over the past year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Mastercard’s transaction volume growth impacted its annual revenue
+    trends?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did Netflix’s operating margin change over the past three fiscal years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did Exxon Mobil's net income for 2023 compare to its net income for 2022?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has gross profit margin trended over the past three fiscal years for
+    Johnson & Johnson?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did Palantir’s profitability trend change over the most recent quarter?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did Home Depot's net income trend over the past year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has growth in net interest income impacted overall profitability this
+    quarter?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did Chevron’s net income trend compare to year-over-year changes in oil
+    prices?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How have operating margins at UnitedHealth Group changed over the past year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How have changes in revenue sources impacted GE’s profit margins over the
+    past year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Coca-Cola's net income margin trended over the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has the net interest margin impacted overall profitability over the past
+    year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did T-Mobile’s earnings per share change over the past three fiscal years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has AMD's operating margin trended over the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did IBM's net income change between 2023 and 2024?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did Morgan Stanley’s net income trend over the past five years and what
+    were the primary drivers?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has recent market volatility impacted Goldman Sachs’ trading and investment
+    banking revenues?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Philip Morris’s operating margin changed over the past year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did changes in mobile ad network performance impact AppLovin’s overall
+    quarterly revenue trends?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How have changes in cardmember spending patterns impacted quarterly revenue
+    trends?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did Salesforce's operating margin change from fiscal year 2023 to fiscal
+    year 2024?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Linde’s operating margin trended over the past three years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Caterpillar’s operating margin trended over the past three years
+    in its Construction Industries segment?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did RTX Corporation’s operating income change compared to the previous
+    year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How did Blackstone's net income change over the last two fiscal quarters?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you provide McDonald's net income trend over the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How have fuel price fluctuations impacted Uber’s profitability in the past
+    year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How have AT&T's profit margins trended over the past three quarters?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has ServiceNow’s subscription revenue grown year-over-year over the past
+    three years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you break down Apple’s revenue by its main business segments over the
+    last year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Could you outline Home Depot's major business segments and their key revenue
+    drivers?
+  tags:
+  - structure
+  - recency
+- query: Which business segment has shown the fastest revenue growth in the past three
+    years?
+  tags:
+  - structure
+  - recency
+- query: How does Coca-Cola's revenue distribution vary across its beverage categories?
+  tags:
+  - structure
+  - recency
+- query: Can you explain T-Mobile US's main lines of business and how they contribute
+    to overall revenue?
+  tags:
+  - structure
+  - recency
+- query: Which of Linde’s business segments accounts for the largest share of revenue
+    from industrial gases?
+  tags:
+  - structure
+  - recency
+- query: Which business segment generates the most revenue from construction equipment?
+  tags:
+  - structure
+  - recency
+- query: Can you break down RTX Corporation’s revenue by its different business segments?
+  tags:
+  - structure
+  - recency
+- query: Which business segment contributes the most to international revenue?
+  tags:
+  - structure
+  - recency
+- query: Can you break down AT&T’s revenue distribution across its business segments
+    this year?
+  tags:
+  - structure
+  - recency
+- query: How have revenue trends shifted among Merck’s key business segments over
+    the past 5 years?
+  tags:
+  - structure
+  - recency
+- query: What impact could increased R&D expenses have on NVIDIA's profitability margins
+    over the next fiscal year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has the company's cash flow from operations changed over the past three
+    years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Tesla’s operating cash flow trended over the past three years, and
+    what might that indicate about its financial stability?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What impact could Visa's cash reserves and revenue stability have on long-term
+    investment strategies?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How do Eli Lilly's cash reserves and revenue growth trends influence its
+    capacity for strategic acquisitions?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Mastercard's operating cash flow margin trended over the last five
+    years, and what does it indicate about its financial stability?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Palantir’s revenue growth trend impacted its long-term financial
+    stability?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you provide the current liquidity ratio and how it compares to last year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has P&G’s free cash flow trended over the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What trends in Chevron’s cash flow indicate its ability to fund long-term
+    capital projects?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does T-Mobile US's cash flow health impact its capacity for future capital
+    investments?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Philip Morris’s free cash flow trend impacted its financial flexibility?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What impact do fluctuations in app advertising revenue have on AppLovin’s
+    long-term profitability and liquidity?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does Salesforce’s current liquidity position and revenue growth trend
+    impact long-term partnership stability?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What impact could rising interest expenses have on RTX Corporation’s profitability
+    over the next year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Blackstone's revenue diversification impacted its resilience in different
+    economic cycles?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does McDonald's current cash flow position impact its ability to expand
+    franchise operations globally?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How will rising interest expenses from recent borrowings impact Disney’s
+    future cash flow and profitability?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How could outstanding receivables from international distributors impact
+    quarterly cash flow projections?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: How does NVIDIA’s AI chip revenue growth compare to that of AMD and Intel?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Microsoft's cloud revenue growth compare to that of its major rivals?
+  tags:
+  - structure
+  - recency
+- query: How does Apple's R&D spending compare to its major consumer electronics peers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How do Google's AI product adoption rates compare with major competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: Which of Amazon's competitors are leading in adopting AI-driven logistics
+    technology?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Broadcom’s R&D spending trend compare with its semiconductor industry
+    peers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How do Tesla's R&D expenditures compare to its main EV competitors over the
+    past three years?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Berkshire Hathaway’s valuation compare to its major competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does JPMorgan Chase's profitability compare to other major U.S. banks?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does Walmart's e-commerce growth trajectory compare to that of its key
+    retail competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Oracle's cloud revenue growth rate stack up against SAP's over the
+    past two years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does Visa’s cross-border transaction growth rate stack up against top
+    fintech competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How do Eli Lilly's R&D investments in obesity treatments compare to those
+    of Novo Nordisk?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Mastercard's cross-border payments strategy compare to that of Visa
+    and American Express?
+  tags:
+  - structure
+  - recency
+- query: How do Netflix’s original content production budgets compare to those of
+    its streaming peers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Exxon Mobil's debt-to-equity ratio compare to major industry peers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Johnson & Johnson's R&D spending compare to its main competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Palantir’s growth rate compare to similar enterprise software companies?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How do Costco’s membership renewal rates stack up against key retail warehouse
+    competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Home Depot’s market growth compare to Lowe’s over the past five
+    years?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does AbbVie's R&D efficiency and pipeline productivity compare to other
+    major pharmaceutical companies?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: How does Bank of America's wealth management growth compare to its top competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Procter & Gamble’s revenue growth compare to its major consumer
+    goods peers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Chevron’s renewable energy investment compare to that of ExxonMobil?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does UnitedHealth Group's revenue growth stack up against its major competitors
+    in the healthcare sector?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does General Electric's revenue growth rate stack up against other major
+    industrial conglomerates like Siemens and Honeywell?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How do Coca-Cola's global marketing strategies compare to those of its top
+    beverage peers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Wells Fargo's mortgage lending performance compare to its main banking
+    peers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does T-Mobile’s 5G coverage performance compare with its largest wireless
+    competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Cisco's quarterly revenue growth compare to Juniper Networks?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How do AMD’s R&D investments compare to key competitors in the semiconductor
+    industry?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How has IBM's revenue growth trended compared to Oracle over the past two
+    years?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Goldman Sachs' investment banking fee growth compare to that of
+    Morgan Stanley?
+  tags:
+  - structure
+  - recency
+- query: How does Philip Morris's market share compare to that of its main competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does AppLovin's mobile ad performance metrics stack up against its main
+    competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does American Express's customer acquisition growth compare with Visa
+    and Mastercard?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Abbott's diagnostic devices revenue compare to that of Roche?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How do Linde’s strategic partnerships compare with those of its main competitors
+    in terms of driving market share growth?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Caterpillar’s revenue growth compare to that of John Deere?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does RTX Corporation's market capitalization growth compare to that of
+    other major defense contractors?
+  tags:
+  - structure
+  - recency
+- query: How does Blackstone's asset growth rate compare to other leading private
+    equity firms?
+  tags:
+  - structure
+  - recency
+- query: How does Uber's ride-hailing market share in Europe compare with competitors
+    like Bolt and Lyft?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Disney's profit margin rank against other major entertainment companies?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does AT&T's network investment compare with those of its key competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Merck's research pipeline compare to those of its main competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does ServiceNow's revenue growth compare to Salesforce and Atlassian
+    over the past three years?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: What recent news or industry events have influenced Costco's stock performance?
+  tags:
+  - structure
+  - recency
+- query: Can you share the latest news about major product launches or industry events
+    involving Cisco Systems?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: Are there any recent news reports about Uber’s expansion into new markets
+    or services?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: What percentage of Netflix’s latest funding was contributed by strategic
+    versus financial investors?
+  tags:
+  - structure
+  - recency
+- query: How is American Express investing in strategic ventures to diversify its
+    revenue streams?
+  tags:
+  - structure
+  - recency
+- query: What percentage of Abbott's recent funding has come from long-term versus
+    short-term investors?
+  tags:
+  - structure
+  - recency
+- query: What steps does AMD take to ensure compliance with global trade and export
+    control regulations?
+  tags:
+  - structure
+  - recency
+- query: What steps does Home Depot take to ensure efficient supply chain and inventory
+    management across all store locations?
+  tags:
+  - structure
+  - recency
+- query: What steps is the company taking to ensure its supply chain supports environmental
+    sustainability and fair labor practices?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has Netflix positioned its brand to stand out from emerging streaming
+    competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What branding strategies does Linde use to differentiate itself from competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What strategies does AT&T use to differentiate its brand from competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What data exists on Amazon's market share trends across different retail
+    categories over the past five years?
+  tags:
+  - structure
+  - recency
+- query: What are the key customer segments driving revenue growth for Broadcom’s
+    semiconductor business?
+  tags:
+  - structure
+  - recency
+- query: How is Oracle positioned in the growing market for cloud-based business applications
+    compared to its competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What are the primary geographical regions driving Chevron's revenue growth,
+    and how do customer preferences vary across them?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What are the current market share trends for AMD in the data center and cloud
+    computing sectors?
+  tags:
+  - structure
+  - recency
+- query: Can you provide insights into current market demand for CRM solutions and
+    how Salesforce is positioned against key competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What steps has T-Mobile taken to upgrade its network infrastructure for improved
+    5G coverage and performance?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What steps has Goldman Sachs taken to modernize its core trading and risk
+    management platforms?
+  tags:
+  - structure
+  - recency
+- query: What steps has Broadcom taken to address and comply with antitrust regulations
+    during its mergers and acquisitions?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What steps is Tesla taking to address emerging EV safety regulations worldwide?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What steps has General Electric taken to address evolving environmental regulations
+    across its global operations?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What steps does Walt Disney take to protect its trademarked characters globally?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: How does Microsoft foresee its AI and cloud services shaping revenue growth
+    over the next decade?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: How does Amazon forecast its future revenue streams from AI and machine learning
+    developments over the next decade?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does Meta anticipate the development of its metaverse-related revenue
+    streams over the next decade?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does Broadcom anticipate its emerging AI-related products will impact
+    revenue growth over the next five years?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: How does Walmart anticipate e-commerce will impact its overall revenue growth
+    over the next decade?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What are Visa’s long-term revenue growth forecasts over the next decade?
+  tags:
+  - structure
+  - recency
+- query: What is Eli Lilly’s projected pipeline growth and revenue outlook based on
+    drugs currently in late-stage development?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: How does Mastercard expect emerging payment technologies to impact its market
+    share over the next decade?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Johnson & Johnson anticipate its product pipeline will impact long-term
+    revenue growth?
+  tags:
+  - structure
+  - recency
+- query: How does Palantir forecast revenue and client growth following its recent
+    expansion into the healthcare and energy sectors?
+  tags:
+  - structure
+  - recency
+- query: What therapeutic areas does AbbVie anticipate will drive its revenue growth
+    over the next decade?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What initiatives is Bank of America pursuing to drive long-term profitability
+    through sustainable finance?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does Procter & Gamble anticipate shifting consumer trends will impact
+    its market share over the next decade?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does GE expect advancements in renewable energy technology to impact
+    its revenue mix over the next decade?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does Cisco anticipate AI and 5G advancements impacting its market position
+    and revenue over the next decade?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What anticipated technological advancements does AMD expect to drive revenue
+    growth over the next five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does Philip Morris foresee its transition away from combustible products
+    impacting revenue streams over the next decade?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: How does Disney anticipate its streaming services will perform in the next
+    five years relative to its parks and resorts division?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: What impact does ServiceNow anticipate AI and automation advancements will
+    have on its long-term strategy and revenue growth?
+  tags:
+  - structure
+  - recency
+- query: How do investors and industry analysts currently perceive Broadcom’s long-term
+    business strategy and acquisitions?
+  tags:
+  - structure
+  - recency
+- query: How is Costco perceived in terms of value for money compared to its competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does NVIDIA’s competitive position in AI-focused GPUs compare to AMD
+    and Intel?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Microsoft’s competitive position in the cloud computing space compare
+    to AWS and Google Cloud?
+  tags:
+  - structure
+  - recency
+- query: How does Apple's competitive position in the wearable technology market compare
+    to rivals?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Broadcom's pricing strategy compare to that of its main rivals in
+    the semiconductor industry?
+  tags:
+  - structure
+  - recency
+- query: How does Tesla's pricing strategy compare to that of other electric vehicle
+    manufacturers?
+  tags:
+  - structure
+  - recency
+- query: How does JPMorgan Chase's performance in the investment banking sector compare
+    to its rival firms?
+  tags:
+  - structure
+  - recency
+- query: How does Walmart's pricing strategy compare to that of its key retail rivals?
+  tags:
+  - structure
+  - recency
+- query: How does Eli Lilly’s market share compare to that of its key competitors
+    in the biopharmaceutical industry?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Mastercard’s global network compare to that of its key competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Palantir’s customer base growth rate compare to that of similar
+    data analytics companies?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Home Depot's pricing strategy compare to that of other major home
+    improvement retailers?
+  tags:
+  - structure
+  - recency
+- query: How does AbbVie's market share in immunology compare to that of other major
+    pharmaceutical companies?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Bank of America's branch network size compare to those of other
+    major U.S. banks?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Procter & Gamble’s brand portfolio compare in performance to rival
+    consumer goods companies?
+  tags:
+  - structure
+  - recency
+- query: How does Chevron's pricing strategy compare to that of its major competitors
+    in the energy sector?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does General Electric's market share compare to that of its top rivals
+    in the renewable energy sector?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Wells Fargo’s market share compare to other major banks in the U.S.?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does T-Mobile's network coverage and expansion strategy compare to its
+    key rivals in the U.S. market?
+  tags:
+  - structure
+  - recency
+- query: How does AMD's CPU pricing compare to its closest competitors in the gaming
+    and data center markets?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How has IBM’s strategy for emerging technologies shaped its position against
+    major competitors in the tech industry?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Morgan Stanley's performance in wealth management compare to that
+    of JPMorgan Chase and Goldman Sachs?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: Who are the main competitors to Philip Morris in emerging markets, and how
+    does the company’s growth strategy stack up against them?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does American Express’s rewards program compare to those of competing
+    credit card providers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Salesforce's pricing and feature set compare to other major CRM
+    providers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Abbott’s innovation pipeline compare to that of other leading healthcare
+    companies?
+  tags:
+  - structure
+  - recency
+- query: How does Linde’s pricing strategy compare to that of its main competitors
+    in the industrial gases market?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Caterpillar's pricing strategy compare to that of Komatsu and Volvo
+    in the heavy machinery market?
+  tags:
+  - structure
+  - recency
+- query: How does Blackstone’s private equity portfolio performance compare with that
+    of rival investment firms?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: How does McDonald’s menu innovation strategy compare with that of its main
+    fast-food competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Disney’s position in the streaming market compare to that of its
+    major rivals?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does AT&T's market share compare to other leading telecom providers in
+    the U.S.?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Merck’s R&D investment compare to that of its major competitors
+    in the pharmaceutical industry?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: Can you provide NVIDIA's gross margin trend over the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What has been Microsoft’s operating margin trend over the past five years?
+  tags:
+  - structure
+  - recency
+- query: What's Google's operating margin over the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you provide Amazon’s return on equity and profit margin for the past
+    five fiscal years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you provide Meta's quarterly operating margin for the past 8 quarters?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What is Broadcom's gross margin percentage for the past five fiscal years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you break down JPMorgan Chase’s revenue growth by business segment over
+    the past five years?
+  tags:
+  - structure
+  - recency
+- query: What is Walmart's current cash flow position and recent trend over the past
+    few quarters?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What has been Visa's revenue growth rate by region over the past five years?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: Can you provide Eli Lilly's R&D-to-revenue ratio over the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What percentage of Mastercard's total revenue comes from cross-border transactions?
+  tags:
+  - structure
+  - recency
+- query: What has been Netflix's operating margin progression over the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you provide Johnson & Johnson's gross margin performance over the past
+    five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What percentage of Palantir’s total revenue comes from government contracts
+    compared to commercial clients?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What have been Costco’s quarterly gross margins for the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What has been AbbVie’s free cash flow over the past five fiscal years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you provide Bank of America's net interest margin for the past five years?
+  tags:
+  - structure
+  - recency
+- query: What percentage of Procter & Gamble’s revenue comes from emerging markets?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What has been Chevron's revenue breakdown by segment over the past three
+    years?
+  tags:
+  - structure
+  - recency
+- query: What has been UnitedHealth Group’s revenue growth rate for its Optum segment
+    in recent years?
+  tags:
+  - structure
+  - recency
+- query: What have been the trends in General Electric’s profit margins over the past
+    five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What is Wells Fargo’s current net interest margin and how has it trended
+    over the past few quarters?
+  tags:
+  - structure
+  - recency
+- query: What has been T-Mobile US's average profit margin over the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What percentage of Cisco's revenue last fiscal year came from recurring subscription
+    services versus hardware sales?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: What is AMD's current dividend policy and recent earnings per share trend?
+  tags:
+  - structure
+  - recency
+- query: What are Goldman Sachs’ current revenue segments and their contribution to
+    total income?
+  tags:
+  - structure
+  - recency
+- query: Can you provide their quarterly net income for the past two years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What was American Express's net interest income growth rate last quarter
+    compared to the same quarter last year?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: Can you provide Salesforce's latest revenue breakdown by geographic region
+    and customer segment?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What has been Abbott Laboratories’ historical growth rate in earnings per
+    share over the last five years?
+  tags:
+  - structure
+  - recency
+- query: What percentage of Caterpillar’s  annual revenue comes from international
+    markets versus domestic sales?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: Can you provide Uber's gross margin and operating margin for the past five
+    years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What percentage of Disney's total revenue comes from streaming services?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: What were AT&T’s revenue and earnings growth rates over the past three years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you provide Merck’s annual R&D spending and its percentage of total revenue
+    for the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What has been the trend in ServiceNow’s revenue growth over the past three
+    years?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: What are NVIDIA's main business segments and their respective revenue contributions?
+  tags:
+  - structure
+  - recency
+- query: How has Microsoft's market share in the cloud computing sector evolved over
+    the last five years?
+  tags:
+  - structure
+  - recency
+- query: How have Apple's global revenue and market share trends changed over the
+    past five years?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What is Google's position in the global search engine market compared to
+    its competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What percentage of the e-commerce market does Amazon currently control compared
+    to five years ago?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What percentage of the global social media market is controlled by Meta Platforms
+    compared to its competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What are Broadcom's primary revenue sources and how have they shifted in
+    recent years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What are the primary industries contributing to Berkshire Hathaway's overall
+    market share?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What are their main business segments and the revenue share of each?
+  tags:
+  - structure
+  - recency
+- query: What is Walmart’s current market share in the U.S. grocery sector compared
+    to its main competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is Oracle's global market share in the cloud services sector over the
+    past three years?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: How does Visa’s global transaction volume compare to its main competitors
+    over the past year?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Mastercard’s global presence compare to its regional market performance?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What are Netflix's major revenue sources and how have they shifted over the
+    past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What is Exxon Mobil’s ranking among global oil and gas companies by revenue?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What is Johnson & Johnson’s current position within the global healthcare
+    market in terms of revenue share compared to key competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is Palantir's current position in the government data analytics market
+    compared to its main competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How many warehouses does Costco operate globally, and what regions contribute
+    the most to their revenue?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What percentage of the home improvement market does Home Depot currently
+    hold compared to its main competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is Procter & Gamble's share of the global consumer goods market compared
+    to its main competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What are Chevron’s main business segments and their contribution to overall
+    revenue?
+  tags:
+  - structure
+  - recency
+- query: How has General Electric's market position changed relative to its main competitors
+    over the past five years?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is Wells Fargo’s ranking among major U.S. banks based on total assets
+    and revenue?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What were T-Mobile US's annual revenues over the past five years and how
+    did their subscriber growth compare to competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is IBM's current position in the global cloud computing market compared
+    to its competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is Goldman Sachs’ current ranking among global investment banks by revenue?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What is Philip Morris’ current global market share in the tobacco industry
+    compared to previous years?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is American Express's current share of the global credit card market
+    compared to last year?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How has Salesforce's global market share evolved over the last five years?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What is RTX Corporation’s market share in the aerospace and defense industry
+    compared to its main competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What are McDonald’s top international markets by revenue and store count?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: How has Uber’s global market share changed over the past three years?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What is Disney's global market share in the streaming industry compared to
+    its main competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is Merck’s global market share in the pharmaceutical industry over the
+    past five years?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What is ServiceNow’s current position in the global IT service management
+    market compared to its competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What are the age group distributions of Amazon’s active shoppers in the U.S.
+    versus internationally?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What proportion of Walmart’s shoppers are from low-income households compared
+    to middle- and high-income brackets?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What proportion of Visa's cardholders are business clients versus individual
+    consumers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What percentage of their clients come from the healthcare sector compared
+    to government and defense industries?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What percentage of their customers are DIY homeowners versus professional
+    contractors?
+  tags:
+  - structure
+  - recency
+- query: What proportion of Uber’s customer base consists of business travelers versus
+    personal riders?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What percentage of ServiceNow's customer base comes from small and medium-sized
+    businesses compared to large enterprises?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: Which subsidiaries generate the most revenue for Berkshire Hathaway?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What steps is Apple taking to integrate environmental sustainability into
+    its business strategy while maintaining its premium brand image?
+  tags:
+  - structure
+  - recency
+- query: How does AMD position itself against competitors in emerging AI and data
+    center markets while pursuing environmentally responsible manufacturing?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Microsoft's employee retention rate compare to industry competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How is Apple approaching talent retention compared to its main competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How is Google attracting and retaining top AI research talent compared to
+    other tech giants?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How has Amazon's employee retention rate compared to key industry rivals
+    over the last 3 years?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Broadcom attract and retain top engineering talent compared to its
+    industry peers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How is Tesla attracting and retaining top engineering talent compared to
+    other automakers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What are their efforts to attract and retain top financial analysts compared
+    to key competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Walmart's employee turnover rate compare to its main competitors
+    in the retail sector?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Eli Lilly's talent retention rate compare to other major pharmaceutical
+    companies?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is Mastercard’s current market position compared to Visa and American
+    Express?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Netflix’s talent recruitment strategy compare to other top streaming
+    platforms?
+  tags:
+  - structure
+  - recency
+- query: How does Exxon Mobil attract and retain top engineering talent compared to
+    other oil and gas companies?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: Who are Johnson & Johnson's top competitors in the medical devices market
+    and how do they compare in market share?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What unique skills and expertise set Palantir's talent pool apart from its
+    main competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What are the top companies Costco competes with in the wholesale retail market,
+    and how do their employee retention rates compare?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Home Depot’s approach to workforce training compare to its main
+    competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does AbbVie's workforce expertise compare to that of its main biopharmaceutical
+    rivals?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Bank of America’s talent strategy compare to its major competitors
+    in the banking sector?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Procter & Gamble’s recruitment strategy for marketing talent compare
+    to its top FMCG competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: Can you provide insights on Chevron's talent retention strategies compared
+    to other major energy companies?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does UnitedHealth Group’s employee retention rate compare to major competitors
+    in the healthcare industry?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How many job expansions has General Electric made in the past two years compared
+    to industry peers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is Coca-Cola’s market positioning compared to emerging beverage brands?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Wells Fargo compare to other major U.S. banks in terms of employee
+    retention rates?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is T-Mobile’s market position compared to AT&T and Verizon over the
+    past three years?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How is Cisco positioned in comparison to other major network infrastructure
+    providers in terms of innovation and market share?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What are IBM’s main competitive advantages compared to other tech giants
+    in attracting and retaining top talent?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Morgan Stanley’s talent retention strategy compare to other major
+    investment banks?
+  tags:
+  - structure
+  - recency
+- query: How does Philip Morris attract and retain top talent in its research and
+    development teams compared to competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How competitive is AppLovin in attracting and retaining top marketing talent
+    compared to industry peers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: Can you provide insights on Salesforce's rate of employee turnover compared
+    to industry peers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Abbott Laboratories' talent recruitment strategy compare to its
+    key competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Caterpillar’s employee retention rate compare to key industry rivals?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How are they attracting top engineering talent compared to peers in the industry?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What emerging fast-food brands pose the greatest threat to McDonald’s market
+    share?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How competitive is Uber's hiring process compared to other ride-hailing companies?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How does Disney's creative talent recruitment compare to its competitors
+    in the entertainment industry?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How has AT&T's workforce size changed compared to its main rivals in the
+    past three years?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How competitive is Merck’s recruitment for top pharmaceutical research scientists
+    compared to peers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What shifts are occurring in consumer demand for AMD’s CPUs versus GPUs over
+    the past year?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What collaborations has Microsoft recently announced with non-profit or educational
+    institutions?
+  tags:
+  - structure
+  - recency
+- query: Can you detail Walmart’s major nonprofit partners and advocacy groups they
+    work with?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you list any nonprofit organizations or community groups Home Depot collaborates
+    with on sustainability initiatives?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What joint initiatives or collaborations has Bank of America recently launched
+    with community organizations or nonprofits?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you list Coca-Cola's major NGO or nonprofit collaborators and describe
+    the focus of these partnerships?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you provide details on Abbott Laboratories’ collaborations with non-profit
+    or public health organizations?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Which countries contribute most to Apple’s international revenue growth?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: What steps is JPMorgan Chase taking to align with regulatory requirements
+    in international markets where they operate?
+  tags:
+  - structure
+  - recency
+- query: Which regions generate the highest transaction volumes for Mastercard?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: Which countries contribute the most to Coca-Cola’s revenue growth in emerging
+    markets?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: In which U.S. states does Wells Fargo hold the highest market share for retail
+    banking?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: How has AMD's market share evolved in key regions like Asia-Pacific, Europe,
+    and North America over the past five years?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: Which countries contribute the most to McDonald's annual revenue?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Which U.S. states generate the highest revenue for AT&T's wireless services?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: What measures does Microsoft take to adhere to global data privacy laws like
+    GDPR and CCPA?
+  tags:
+  - structure
+  - recency
+- query: What processes does AppLovin use to optimize and monitor its mobile app monetization
+    operations?
+  tags:
+  - structure
+  - recency
+- query: Who are the members of JPMorgan Chase’s current executive leadership team?
+  tags:
+  - structure
+  - recency
+- query: What emerging green technology markets should GE prioritize based on current
+    investor interest trends?
+  tags:
+  - structure
+  - recency
+- query: What markets does Caterpillar focus on for its core equipment sales?
+  tags:
+  - structure
+  - recency
+- query: What are the latest shifts in mobile gaming user behavior that could impact
+    AppLovin’s ad tech strategies?
+  tags:
+  - structure
+  - recency
+- query: Which countries have specific government approval requirements for Abbott’s
+    medical devices?
+  tags:
+  - structure
+  - recency
+- query: What trends in venture capital backing align with Cisco’s recent strategic
+    acquisitions?
+  tags:
+  - structure
+  - recency
+- query: How does each Wells Fargo business segment perform in terms of year-over-year
+    growth?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What recent shifts in institutional investor interest could impact Linde’s
+    capital allocation strategy?
+  tags:
+  - structure
+  - recency
+  - investor&fundinglandscape_depth
+- query: How is AbbVie positioned to capture growth opportunities in emerging healthcare
+    markets?
+  tags:
+  - structure
+  - recency
+- query: Can you provide an overview of Amazon’s main business divisions and their
+    global reach?
+  tags:
+  - structure
+  - recency
+- query: What is the growth rate of McDonald's same-store sales over the past five
+    years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What is RTX Corporation's current debt-to-equity ratio and how has it changed
+    over the past five years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How is General Electric adapting its product offerings to meet the evolving
+    needs of its key customer segments?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: How does Home Depot foresee changes in consumer demand impacting its expansion
+    plans over the next decade?
+  tags:
+  - structure
+  - recency
+- query: Which countries have recently increased their governmental partnerships with
+    NVIDIA for AI infrastructure projects?
+  tags:
+  - structure
+  - recency
+- query: What global regulatory requirements does Abbott need to address when introducing
+    new diagnostic products?
+  tags:
+  - structure
+  - recency
+- query: What emerging talent trends could impact Blackstone’s competitive position
+    in the private equity sector?
+  tags:
+  - structure
+  - recency
+- query: What digital platforms and infrastructure has AbbVie implemented to support
+    and accelerate its drug development processes?
+  tags:
+  - structure
+  - recency
+- query: How is the adoption of artificial intelligence affecting ServiceNow’s platform
+    usage trends across industries?
+  tags:
+  - structure
+  - recency
+- query: Can you provide details on Caterpillar’s liquidity position and debt maturity
+    schedule?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you provide Uber’s average collection period for amounts billed to riders
+    and partner-drivers?
+  tags:
+  - structure
+  - recency
+- query: What AI and machine learning systems does Merck use to optimize drug discovery
+    processes?
+  tags:
+  - structure
+  - recency
+- query: How has the performance of Amazon’s subscription services impacted overall
+    profitability this year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does UnitedHealth Group incorporate sustainable practices into its supply
+    chain management?
+  tags:
+  - structure
+  - recency
+- query: What initiatives does Linde have in place to promote cultural diversity and
+    inclusion across its global workforce?
+  tags:
+  - structure
+  - recency
+- query: How does Netflix ensure compliance with data privacy regulations in its global
+    operations?
+  tags:
+  - structure
+  - recency
+- query: What recent market trends or consumer shifts have influenced Procter & Gamble's
+    quarterly earnings performance?
+  tags:
+  - structure
+  - recency
+- query: What innovative payment technologies is American Express currently developing?
+  tags:
+  - structure
+  - recency
+- query: Which states have the highest enrollment in UnitedHealth Group’s health plans?
+  tags:
+  - structure
+  - recency
+- query: How has Abbott Laboratories' debt-to-equity ratio evolved in recent years
+    and what does that imply for its long-term financial stability?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does Linde comply with international environmental regulations related
+    to industrial gas production?
+  tags:
+  - structure
+  - recency
+- query: What certifications or licenses does Caterpillar maintain to operate in various
+    countries?
+  tags:
+  - structure
+  - recency
+- query: Can you provide an update on recent global health events influencing Johnson
+    & Johnson's market performance?
+  tags:
+  - structure
+  - recency
+  - geographic&governmentalinsights_depth
+- query: How does JPMorgan Chase streamline its internal workflows to improve efficiency
+    across different divisions?
+  tags:
+  - structure
+  - recency
+- query: What sustainability-focused products or services have Proctor and Gamble
+    introduced recently?
+  tags:
+  - structure
+  - recency
+- query: How does Walt Disney integrate sustainability practices into the production
+    of its films and theme park operations?
+  tags:
+  - structure
+  - recency
+- query: How does NVIDIA’s AI chip revenue growth compare to that of AMD and Intel?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What measures does Meta take to safeguard user data in line with international
+    privacy laws?
+  tags:
+  - structure
+  - recency
+- query: Are there any recent market developments impacting UnitedHealth Group’s stock
+    performance?
+  tags:
+  - structure
+  - recency
+- query: How did Merck’s gross margin change compared to the previous fiscal year?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does Caterpillar’s revenue growth compare to that of John Deere?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What venture partnerships has IBM formed to support emerging tech startups,
+    and how do these align with its strategic investment areas?
+  tags:
+  - structure
+  - recency
+- query: What long-term strategic initiatives is Wells Fargo pursuing to enhance its
+    competitive positioning in the financial services industry?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is the general public sentiment toward NVIDIA's role in advancing AI
+    technologies?
+  tags:
+  - structure
+  - recency
+- query: What measures has Google implemented to enhance the security and efficiency
+    of its global data center network?
+  tags:
+  - structure
+  - recency
+- query: What insights can you share about demographic and geographic patterns among
+    Berkshire Hathaway’s customer base across its diverse portfolio companies?
+  tags:
+  - structure
+  - recency
+- query: What strategic partnerships is Netflix fostering to expand its international
+    footprint?
+  tags:
+  - structure
+  - recency
+- query: How has Microsoft’s strategic vision evolved over the past decade, and how
+    does it position the company in the current tech landscape?
+  tags:
+  - structure
+  - recency
+- query: What sustainability initiatives is DJI implementing to reduce its environmental
+    impact while maintaining its market leadership?
+  tags:
+  - structure
+  - recency
+- query: What are the key geographic regions where Chime’s customers are concentrated?
+  tags:
+  - structure
+  - recency
+- query: What is the community perception of Epic Games’ approach to supporting independent
+    game developers?
+  tags:
+  - structure
+  - recency
+- query: What industries or organizations is xAI seeking strategic alliances with
+    to accelerate AI innovation?
+  tags:
+  - structure
+  - recency
+- query: Can you provide the current operating cash flow and how it has trended over
+    the last three years for Benchling?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you discuss any collaborations Grammarly has formed with educational
+    platforms or institutions to expand its global presence?
+  tags:
+  - structure
+  - recency
+- query: How does Plaid's customer growth compare to that of its key competitors?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What licenses and regulatory approvals does Brex currently hold to operate
+    its financial services?
+  tags:
+  - structure
+  - recency
+- query: Can you detail Anthropic’s latest breakthroughs in AI safety and alignment
+    research?
+  tags:
+  - structure
+  - recency
+- query: What advantages does Neuralink have over its competitors in attracting top
+    neuroscience and engineering talent?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What is Notion’s cash flow ability to sustain long-term product innovation
+    initiatives?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: Can you provide an overview of Colossal's current liquidity position and
+    cash runway?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What recent industry collaborations or strategic initiatives has Samsara
+    announced?
+  tags:
+  - structure
+  - recency
+- query: How does Miro’s user base vary across different industries and geographic
+    regions?
+  tags:
+  - structure
+  - recency
+- query: Who are the founders of Anthropic?
+  tags:
+  - structure
+  - recency
+- query: What processes does Netskope follow to ensure compliance with industry regulations
+    across its operations?
+  tags:
+  - structure
+  - recency
+- query: What recent product launches or international expansions has ByteDance announced?
+  tags:
+  - structure
+  - recency
+  - product&serviceintelligence_depth
+- query: How does Discord maintain a competitive edge in the messaging and community
+    platform market?
+  tags:
+  - structure
+  - recency
+- query: Who founded Glean and what roles do they currently hold?
+  tags:
+  - structure
+  - recency
+- query: Can you describe how Automation Anywhere communicates its brand values and
+    mission to customers and partners?
+  tags:
+  - structure
+  - recency
+- query: How does Epic Games ensure compliance with global data protection and privacy
+    regulations?
+  tags:
+  - structure
+  - recency
+- query: Does Canva have a documented process for managing data privacy incidents
+    in accordance with global compliance standards?
+  tags:
+  - structure
+  - recency
+- query: What are the latest global adoption trends of Ripple’s payment solutions
+    across different regions?
+  tags:
+  - structure
+  - recency
+- query: What impact could fluctuating maintenance costs of delivery drones have on
+    Zipline’s long-term financial resilience?
+  tags:
+  - structure
+  - recency
+- query: Can you explain the main industries Outreach designs its solutions for?
+  tags:
+  - structure
+  - recency
+- query: Which recent funding rounds have fueled Samsara's expansion into international
+    markets?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How has venture capital funding impacted Gopuff’s market expansion strategy?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How is Perplexity positioning itself to differentiate from other AI search
+    and research platforms?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: Can you provide details on Tanium’s typical invoice processing time for vendor
+    payments?
+  tags:
+  - structure
+  - recency
+- query: What new markets or customer segments is Glean targeting to drive growth
+    over the next few years?
+  tags:
+  - structure
+  - recency
+- query: Can you tell me who the founders of Brex are and what roles they currently
+    hold?
+  tags:
+  - structure
+  - recency
+- query: Can you provide recent trends in Faire’s profitability and cash flow strength?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: What recent logistics partnerships or expansions has Flexport announced in
+    the global freight market?
+  tags:
+  - structure
+  - recency
+- query: What notable brand collaborations has Xiaohongshu secured in the past year?
+  tags:
+  - structure
+  - recency
+- query: How has Klarna positioned itself against emerging Buy Now, Pay Later providers?
+  tags:
+  - structure
+  - recency
+  - peers&competitivepositioning_depth
+- query: What recent announcements or partnerships have influenced Stripe’s position
+    in the payments industry?
+  tags:
+  - structure
+  - recency
+- query: Which cities in China see the highest adoption rates for Yuanfudao’s online
+    learning programs?
+  tags:
+  - structure
+  - recency
+- query: What measures does TripActions have in place to ensure compliance with international
+    data protection regulations for travel bookings?
+  tags:
+  - structure
+  - recency
+- query: How has Flexport positioned its brand to distinguish itself in the global
+    freight forwarding market?
+  tags:
+  - structure
+  - recency
+- query: How has Safe Superintelligence’s operating margin evolved over the past three
+    years?
+  tags:
+  - structure
+  - recency
+  - financialperformance&financialhealth_depth
+- query: How does SHEIN ensure its supply chain adheres to sustainable and humane
+    labor practices?
+  tags:
+  - structure
+  - recency

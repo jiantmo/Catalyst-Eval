@@ -1,0 +1,333 @@
+- tag: structure
+  metric: true
+  assertions:
+  - text: 'response presents the most relevant key information first: a concise summary
+      that directly answers the question followed by detailed explanation only as
+      needed to support the reasoning'
+    level: critical
+  - text: response is well-structured and organized (uses clear visual hierarchy via
+      headings, paragraphs, lists, tables, etc... as appropriate)
+    level: critical
+  - text: if there are multiple records, response presents ERP data in appropriate
+      tabular format when displaying multiple records, with clear column headers and
+      consistent data formatting (e.g., currency, dates, customer IDs) multiple records,
+      with clear column headers and consistent data formatting (e.g., currency, dates,
+      customer IDs)
+    level: critical
+- tag: depth
+  metric: true
+  assertions:
+  - text: response ensures coverage and sufficiently answers the user’s query by including
+      all essential information. this should apply only when system responds back
+      with concrete answer based on ERP data including absense of data, otherwise
+      it should be considered failed.
+    level: critical
+  - text: 'response is transparent about gaps: If essential information is missing,
+      clearly inform the user of the gap or highlight uncertainties'
+    level: critical
+  - text: every claim must map to a number, date, or source; approximate qualifiers
+      are used if precise values are unknown
+    level: critical
+  - text: response avoids U.S.-centric bias when the user asks for global context
+    level: critical
+- tag: recency
+  metric: true
+  assertions:
+  - text: response anchors time-sensitive data to specific dates/times (e.g., 'as
+      of Nov 14') rather than using relative terms like 'currently' or 'today' which
+      lose meaning over time
+    level: critical
+  - text: response includes the date of the source for news, reports, or market data
+      to allow the user to judge currency
+    level: critical
+  - text: response aligns the recency of the data with the user's intent (e.g., using
+      the latest available quote for 'current price' vs. historical data for trends)
+    level: critical
+- tag: citation
+  metric: true
+  assertions:
+  - text: response includes source references to legal entity in ERP. In case the
+      response is seeking a clarification, it is not a failure
+    level: critical
+  - text: Response includes source references to company entity in ERP. In case the
+      response is seeking a clarification, it is not a failure
+    level: critical
+  - text: Individual customer or vendor related responses should reference a customer
+      or vendor contract ID. In case the response is seeking a clarification, it is
+      not a failure
+    level: critical
+  - text: Summary vendor or customer responses for queries crossing customer or vendor
+      IDs should include source citation references to a page in the ERP.  In case
+      the response is seeking a clarification, it is not a failure. Also if the response
+      is not a summary, it is not a failure
+    level: critical
+- query: What are the aged balances for all customers?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: Which customers have the highest overdue balances?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the aged balance for Forest Wholesales?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: Which customers have balances in the 90+ days aging bucket?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the total amount in the 180+ days aging category?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: Which customers have exceeded their credit limits?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the credit limit for Contoso Retail San Diego?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the aged balance for Birch Company?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What open transactions does Cave Wholesales have?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What open transactions does Contoso Retail Detroit have?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What open transactions does Birch Company have?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What open collections cases exist for Contoso Retail Detroit?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What open collections cases exist for Birch Company?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What open activities exist for Cave Wholesales?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What open activities exist for Contoso Retail Detroit?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: Which customers have transactions with 'Promised to pay' status?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the contact information for Forest Wholesales?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the phone number for Contoso Europe?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: Which customers are in customer group 30?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the contact information for Sunset Wholesales?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: Which customers use EUR currency?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the phone number for Yellow Square?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What invoices were created for Contoso Retail San Diego?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the total invoice amount for Forest Wholesales?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: Which customer has the highest total invoice amount?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What invoices exist for Contoso Europe?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the largest single invoice in the system?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: How many invoices does Cave Wholesales have?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What invoices were created in 2017?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the total invoice amount for Sunset Wholesales?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What payments has Cave Wholesales made?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What payments has Contoso Retail Chicago made?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What payments has Contoso Retail Detroit made?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What payments has Birch Company made?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the largest payment made by Cave Wholesales?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What is the largest payment made by Contoso Retail Detroit?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: How many payments did Birch Company make in 2017?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: How many sales orders does Forest Wholesales have?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What are the open sales orders for Cave Wholesales?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: Which sales orders have 'Released' status?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: How many sales orders does Birch Company have?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: Which sales orders are marked 'Do not process'?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What sales orders does Contoso Retail San Diego have?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: Which customer has the most open sales orders?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation
+- query: What returned orders exist in the system?
+  tags:
+  - structure
+  - depth
+  - recency
+  - citation

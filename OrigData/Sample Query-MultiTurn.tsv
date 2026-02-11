@@ -1,0 +1,5 @@
+query	segment
+[{"text":"What is Teams MAU?","author":"user"},{"text":"How about word?","author":"user"},{"text":"in Japan?","author":"user"}]	en
+[{"text":"What is Teams DAU?","author":"user"},{"text":"How about Excel?","author":"user"}]	en
+[{"text":"Get me overview of OPG?","author":"user"},{"text":"How about Teams? is it in OPG?","author":"user"}]	en
+[{"text":"Get me overview of Accenture","author":"user"},{"text":"how about usage","author":"user"},{"text":"How about KPMG?","author":"user"},{"text":"is there any Copilot usage? ","author":"user"}]	en
