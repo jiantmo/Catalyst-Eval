@@ -1,0 +1,48 @@
+# FnO MCP Smoke Test
+#
+# End-to-end validation that Sydney handles FnO (Finance & Operations) queries via MCP:
+#   trigger MCP tool -> return business data -> Sydney composes reply
+#
+# Python test file: Enterprise/lm_checklist/python_tests/mos_fno_mcp_test.py
+# TSV query set:    jiantmo-fno_mcp_3example.tsv
+#
+# How the test reference works:
+#   test: mos_fno_mcp_test.function_name
+#         └── filename (no .py)  └── function name
+#   SEVAL loads the function from the python_tests/ directory using this path.
+#
+# Note: Python non-LLM tests require at least one LLM-driven assertion (with text:)
+#   in the same YAML to execute. See Enterprise/lm_checklist/readme.md.
+
+# ── Tag definition: assertions shared across all queries ────────────────────
+
+- tag: fno_mcp_smoke
+  metric: true
+  assertions:
+    # LLM-driven assertion (required — Python tests won't run without at least one)
+    # Natural language check that the reply contains FnO business data
+    - text: The response provides sales order, purchase order, or transfer order
+        information retrieved from a Finance and Operations system.
+      level: critical
+
+    # Basic check: Sydney returned a non-empty reply
+    - test: mos_fno_mcp_test.test_non_empty_reply
+      level: critical
+
+    # Keyword check: FnO entity name appears in tool calls or reply text
+    - test: mos_fno_mcp_test.test_fno_entity_in_response
+      level: expected
+
+# ── Query bindings ───────────────────────────────────────────────────────────
+
+- query: Find recent 5 sales order
+  tags:
+    - fno_mcp_smoke
+
+- query: Find recent 5 purchase order of company USMF
+  tags:
+    - fno_mcp_smoke
+
+- query: Find recent 5 transfer order of company USMF
+  tags:
+    - fno_mcp_smoke
