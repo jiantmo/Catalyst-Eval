@@ -1,0 +1,444 @@
+{
+    "$schema": "https://aka.ms/json-schemas/copilot-extensions/v2.1/plugin.schema.json",
+    "schema_version": "v2.4",
+    "name_for_human": "FNO-DA-${{FNO_ENVIRONMENT_NAME}}",
+    "description_for_human": "FNO-DA-${{FNO_ENVIRONMENT_NAME}}-${{APP_NAME_SUFFIX}}",
+    "contact_email": "publisher-email@example.com",
+    "namespace": "fnodeclarativeagent",
+    "functions": [
+        {
+            "name": "data_create_entities",
+            "description": "Data tool. Create entities using OData. Deep inserts are not supported for create.  Use OData standards for date and number formatting",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "odataPath": {
+                        "type": "string",
+                        "description": "The OData path of the entity to create. E.g. Customers"
+                    },
+                    "entityDefinitionsJson": {
+                        "type": "string",
+                        "description": "The array of json objects of the entity containing field values as it would be specified in an F&O OData request."
+                    }
+                },
+                "required": [
+                    "odataPath",
+                    "entityDefinitionsJson"
+                ]
+            }
+        },
+        {
+            "name": "data_delete_entities",
+            "description": "Data tool. Delete entities using OData. Use OData standards for number formatting",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "odataPaths": {
+                        "type": "string",
+                        "description": "The json with an array of OData paths of the entities to delete. E.g. {\"ODataPaths\":[\"Customers(dataAreaId='USMF', CustomerAccount='US-001')\", \"Customers(dataAreaId='USMF', CustomerAccount='US-002')\"]}."
+                    }
+                },
+                "required": [
+                    "odataPaths"
+                ]
+            }
+        },
+        {
+            "name": "data_find_entities",
+            "description": "Data tool. Find entities using OData. Use OData standards for date and number formatting.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "odataPath": {
+                        "type": "string",
+                        "description": "The OData path, typically starting from the entity set name. E.g. Customers, Customers(dataAreaId='USMF',CustomerAccount='CUST001')"
+                    },
+                    "odataQueryOptions": {
+                        "type": "string",
+                        "description": "\r\nThe OData query options. E.g. $filter=Name eq 'Contoso'. Usage instructions:\r\n- You MUST ALWAYS add cross-company at the start of the options. E.g., `cross-company=true&$filter=Name eq \"D0001\"`. Filter by dataAreaId only works when `cross-company=true`. Filter by default dataAreaId is applied when cross-company=false.\r\n- Always use $select to specify only the fields you need. Example: $select=SalesOrderNumber,ItemNumber,Quantity.\r\n- Use $expand to retrieve related navigation properties (only first-level expansion is supported). E.g. $expand=SalesOrderLines,Project.\r\n- When querying in a specific company, make sure to add the company filter: dataAreaId eq '<companyId>'.\r\n- When searching for strings use wildcards instead of unsupported operators like 'contains', 'startsWith'. E.g. $filter=StringField eq '*retail*'.\r\n- When filtering by enum fields, append the enum namespace before the enum value. E.g. $filter=Status eq Microsoft.Dynamics.DataEntities.Status'Active'.\r\n"
+                    }
+                },
+                "required": [
+                    "odataPath"
+                ]
+            }
+        },
+        {
+            "name": "data_find_entity_type",
+            "description": "Data tool. Find OData entity types. This is needed for calling the data_get_entity_metadata tool. The tool returns multiple top hits that may be related to your query. You decide which one matches your search.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "tableSearchFilter": {
+                        "type": "string",
+                        "description": "The search term to filter the tables"
+                    },
+                    "topHitCount": {
+                        "type": "string",
+                        "description": "The number of tables to return. The default value is 10."
+                    }
+                },
+                "required": [
+                    "tableSearchFilter"
+                ]
+            }
+        },
+        {
+            "name": "data_get_entity_metadata",
+            "description": "Data tool. Get metadata for an entity. This metadata is needed for calling the data_find_entities, data_create_entities, data_update_entities, data_delete_entities tools.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "entitySetName": {
+                        "type": "string",
+                        "description": "The entity set name for metadata retrieval"
+                    },
+                    "includeKeys": {
+                        "type": "string",
+                        "description": "Boolean to include keys in metadata for Create/Update/Delete operations. Default: false."
+                    },
+                    "includeFieldConstraints": {
+                        "type": "string",
+                        "description": "Boolean to include field constraints (e.g., 'IsReadOnly', 'MaxLength' etc) in metadata for Create/Update/Delete operations. Default: false."
+                    },
+                    "includeRelationships": {
+                        "type": "string",
+                        "description": "Boolean to include relationships in metadata for Create/Update/Delete operations. Default: false."
+                    },
+                    "includeEnumValues": {
+                        "type": "string",
+                        "description": "Boolean to include enum values in metadata. Use ONLY when enum values are required for Create/Update/Delete operations. Default: false."
+                    },
+                    "includeActions": {
+                        "type": "string",
+                        "description": "Boolean to include actions info in metadata. Default: false."
+                    }
+                },
+                "required": [
+                    "entitySetName",
+                    "includeKeys",
+                    "includeFieldConstraints",
+                    "includeRelationships",
+                    "includeEnumValues",
+                    "includeActions"
+                ]
+            }
+        },
+        {
+            "name": "data_update_entities",
+            "description": "Data tool. Update entities using OData. Deep updates are not supported for update. Use OData standards for date and number formatting",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "updatedOdataPathAndFieldValuesJson": {
+                        "type": "string",
+                        "description": "The array of json objects containing the odataPath and updated field values as it would be specified in an F&O OData request. Eg: {\"ODataPath\": \"Customers(dataAreaId='USMF', CustomerAccount='US-001')\", \"UpdatedFieldValues\": {...}}"
+                    }
+                },
+                "required": [
+                    "updatedOdataPathAndFieldValuesJson"
+                ]
+            }
+        },
+        {
+            "name": "form_click_control",
+            "description": "Form tool. Click a control or a sub-element of a control on the form. Clicking on a sub-element of a control is done via the actionId parameter.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "controlName": {
+                        "type": "string",
+                        "description": "The Name property of the control (not the label)."
+                    },
+                    "actionId": {
+                        "type": "string",
+                        "description": "The id of the action on the control. \r\n- For buttons and tab the actionId will be ignored. \r\n- For list boxes use the OptionId property of an item to select it. \r\n- For tree nodes use the Expand, Collapse, Select, Unselect values in the ActionIds to perform the appropriate action."
+                    }
+                },
+                "required": [
+                    "controlName"
+                ]
+            }
+        },
+        {
+            "name": "form_close_form",
+            "description": "Form tool. Close form",
+            "parameters": {
+                "type": "object",
+                "properties": {},
+                "required": []
+            }
+        },
+        {
+            "name": "form_filter_form",
+            "description": "Form tool. Applies a filter on the form",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "controlName": {
+                        "type": "string",
+                        "description": "Name of the control that is related to field that we are filtering on"
+                    },
+                    "filterValue": {
+                        "type": "string",
+                        "description": "Value to filter on"
+                    }
+                },
+                "required": [
+                    "controlName",
+                    "filterValue"
+                ]
+            }
+        },
+        {
+            "name": "form_filter_grid",
+            "description": "Form tool. Filter on a grid",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "gridName": {
+                        "type": "string",
+                        "description": "The grid name"
+                    },
+                    "gridColumnName": {
+                        "type": "string",
+                        "description": "The name of the grid column to filter on"
+                    },
+                    "gridColumnValue": {
+                        "type": "string",
+                        "description": "The value to filter the grid column on. For Numeric and Date values \"..\" can be used for range e.g. \"12..14\",  for less or greater operators use \"<\" and \">\" e.g. \"<12\", \">12\". SysQueryRangeUtil functions can be used for advanced filtering, e.g. \"(DayRange(-30,0))\". To clear a filter, pass an empty string"
+                    }
+                },
+                "required": [
+                    "gridName",
+                    "gridColumnName"
+                ]
+            }
+        },
+        {
+            "name": "form_find_controls",
+            "description": "Form tool. Find controls on the form. Use this tool if you do not see the required controls in the form state after opening it, suspect that the control must be on one of the closed tabs, but not sure which one. This tool accepts only one search term per call - to find multiple different controls, call this multiple times with different search terms.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "controlSearchTerm": {
+                        "type": "string",
+                        "description": "A search term used to find controls on the form"
+                    }
+                },
+                "required": [
+                    "controlSearchTerm"
+                ]
+            }
+        },
+        {
+            "name": "form_find_menu_item",
+            "description": "Form tool. Find a menu item",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "companyId": {
+                        "type": "string",
+                        "description": "The ID of the company, i.e. DAT, DEMF, USMF, etc. If not specified then either a last used company or a default company for the current user will be used."
+                    },
+                    "menuItemFilter": {
+                        "type": "string",
+                        "description": "The search term to filter the menu items"
+                    },
+                    "responseSize": {
+                        "type": "string",
+                        "description": "The number of menu items to return. The default number is 50"
+                    }
+                },
+                "required": [
+                    "menuItemFilter"
+                ]
+            }
+        },
+        {
+            "name": "form_open_lookup",
+            "description": "Form tool. Open a lookup control on the form. This tool should only be called on controls that have a HasLookup value of true.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "lookupName": {
+                        "type": "string",
+                        "description": "The lookup name"
+                    }
+                },
+                "required": [
+                    "lookupName"
+                ]
+            }
+        },
+        {
+            "name": "form_open_menu_item",
+            "description": "Form tool. Opens menu item",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The menu item name"
+                    },
+                    "type": {
+                        "type": "string",
+                        "description": "The type of the menu item",
+                        "enum": [
+                            "Display",
+                            "Action"
+                        ]
+                    },
+                    "companyId": {
+                        "type": "string",
+                        "description": "The ID of the company, i.e. DAT, DEMF, USMF, etc"
+                    }
+                },
+                "required": [
+                    "name",
+                    "type"
+                ]
+            }
+        },
+        {
+            "name": "form_open_or_close_tab",
+            "description": "Form tool. Open or close a tab on the form",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "tabName": {
+                        "type": "string",
+                        "description": "The tab name"
+                    },
+                    "tabAction": {
+                        "type": "string",
+                        "description": "The action to perform on the tab",
+                        "enum": [
+                            "Open",
+                            "Close"
+                        ]
+                    }
+                },
+                "required": [
+                    "tabName",
+                    "tabAction"
+                ]
+            }
+        },
+        {
+            "name": "form_save_form",
+            "description": "Form tool. Save the form",
+            "parameters": {
+                "type": "object",
+                "properties": {},
+                "required": []
+            }
+        },
+        {
+            "name": "form_select_grid_row",
+            "description": "Form tool. Select a row in a grid",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "gridName": {
+                        "type": "string",
+                        "description": "The grid name"
+                    },
+                    "rowNumber": {
+                        "type": "string",
+                        "description": "The row number to select"
+                    },
+                    "marking": {
+                        "type": "string",
+                        "description": "Optionally determine if the selected row should be marked",
+                        "enum": [
+                            "Marked",
+                            "Unmarked"
+                        ]
+                    }
+                },
+                "required": [
+                    "gridName",
+                    "rowNumber"
+                ]
+            }
+        },
+        {
+            "name": "form_set_control_values",
+            "description": "Form tool. Set values on one or more form controls. Note that this should not be used to set values for form controls that require lookup. Use the form_open_lookup for those controls.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "setControlValues": {
+                        "type": "string",
+                        "description": "JSON string array of controls and values. Example: '[{\"controlName\": \"FirstName\", \"value\": \"John\"}, {\"controlName\": \"LastName\", \"value\": \"Doe\"}]'"
+                    }
+                },
+                "required": ["setControlValues"]
+            }
+        },
+        {
+            "name": "form_sort_grid_column",
+            "description": "Form tool. Sort a grid by a grid column",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "gridName": {
+                        "type": "string",
+                        "description": "The grid name"
+                    },
+                    "gridColumnName": {
+                        "type": "string",
+                        "description": "The name of the grid column to sort"
+                    },
+                    "sortDirection": {
+                        "type": "string",
+                        "description": "The sort direction",
+                        "enum": [
+                            "Ascending",
+                            "Descending"
+                        ]
+                    }
+                },
+                "required": [
+                    "gridName",
+                    "gridColumnName",
+                    "sortDirection"
+                ]
+            }
+        }
+    ],
+    "runtimes": [
+        {
+            "type": "RemoteMCPServer",
+            "spec": {
+                "url": "https://${{FNO_ENVIRONMENT_NAME}}.operations.int.dynamics.com/mcp"
+            },
+            "run_for_functions": [
+                "data_create_entities",
+                "data_delete_entities",
+                "data_find_entities",
+                "data_find_entity_type",
+                "data_get_entity_metadata",
+                "data_update_entities",
+                "form_click_control",
+                "form_close_form",
+                "form_filter_form",
+                "form_filter_grid",
+                "form_find_controls",
+                "form_find_menu_item",
+                "form_open_lookup",
+                "form_open_menu_item",
+                "form_open_or_close_tab",
+                "form_save_form",
+                "form_select_grid_row",
+                "form_set_control_values",
+                "form_sort_grid_column"
+            ],
+            "auth": {
+                "type": "OAuthPluginVault",
+                "reference_id": "${{MCP_DA_AUTH_ID_AURORABAPE}}"
+            }
+        }
+    ]
+}
