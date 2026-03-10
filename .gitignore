@@ -23,3 +23,6 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+
+# Large demo data — not tracked in git
+Dataset/FnO Demo Data/

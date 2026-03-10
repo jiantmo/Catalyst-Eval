@@ -1,0 +1,243 @@
+- query: Share the list of item numbers in the product catalog for which i have access to create purchase requisition in legal
+    entity USMF
+  assertions:
+  - text: Based on the product catalog in legal entity USMF, here are the item numbers available for creating purchase requisitions.
+      Item Numbers from Product Catalog (USMF) - C0001 Microsoft Natural Keyboard Elite, C0002 Microsoft Arc™ Keyboard, C0003
+      Microsoft Arc™ Mouse, C0004 Lifecam HD 5000. All of these items are released products in the USMF legal entity and can
+      be used when creating purchase requisitions.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Share the current status of the purchase requisition number 000081
+  assertions:
+  - text: Got it! Purchase requisition 000081 has been pending for approval with Inga. Details - Purchase Requisition 000081
+      PR test 001, Previous Status Draft, Current Status In Review. The purchase requisition has entered the approval workflow
+      and is now awaiting review by the designated approvers according to your organization's workflow configuration.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Share the purchase order reference for the approved purchase requisition number 000081
+  assertions:
+  - text: Perfect I have following purchase order details against the purchase requisition number 000081 in legal entity USMF.
+      Details - Purchase order number 000000200, vendor account US-111.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Show me what makes up GL account 1110 for this period
+  assertions:
+  - text: Using legal entity USMF and fiscal period Jan 2026. Using the most recent calculated trial balance snapshot for
+      this period. GL account 1110 is made up of 128 posted transactions. Here are the transactions with amounts and dimensions.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: What are the top drivers hitting GL account 6110 this period
+  assertions:
+  - text: Using USMF Jan 2026 and the latest calculated trial balance. GL account 6110 activity is driven by 3 large vouchers
+      totaling 420,000. Here are the top contributing transactions and their source type.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Break down GL account 1300 by department for this period
+  assertions:
+  - text: Using USMF Jan 2026. From the latest calculated trial balance, here is GL account 1300 activity grouped by Department
+      with totals and the supporting vouchers.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Show me the vendor invoices behind postings to GL account 2010 for this period
+  assertions:
+  - text: Using USMF Jan 2026. From the latest calculated trial balance, postings to GL account 2010 include vendor invoices
+      INV 04521 and INV 04534. Opening the first invoice link.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Open the source document for voucher 000123
+  assertions:
+  - text: Using USMF Jan 2026. Voucher 000123 is a vendor invoice INV 04521. Opening the invoice record.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: What document caused the posting to GL account 1650 on 1 15 2026
+  assertions:
+  - text: Using USMF Jan 2026. The posting to GL account 1650 on 1 15 is from fixed asset acquisition FA 000812. Opening the
+      fixed asset transaction.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: What is still unposted for this period that could impact the trial balance
+  assertions:
+  - text: Using USMF Jan 2026. There are 6 unposted general journals and 2 pending vendor invoices dated in this period that
+      would impact the trial balance once posted.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Is there anything unposted that will hit GL account 6110 this period
+  assertions:
+  - text: Using USMF Jan 2026. One unposted general journal for 120,000 includes a line posting to GL account 6110. Here is
+      the journal and line summary.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Do I have any unposted activity left for this period
+  assertions:
+  - text: Using USMF Jan 2026. I found zero unposted general journals and zero pending vendor invoices dated in this period.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: When was the trial balance last calculated for this period
+  assertions:
+  - text: Using USMF Jan 2026. The most recent trial balance snapshot for this period was created Jan 31 2026 6 14 PM by user
+      Amina.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: What exactly is included in the trial balance for this period
+  assertions:
+  - text: Using USMF Jan 2026. The trial balance was calculated for From date 1 1 2026 To date 12 31 2026 using Posting layer
+      Current and Financial dimension set Main account.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Do I need to recalculate the trial balance for this period
+  assertions:
+  - text: Using USMF Jan 2026. Since the last trial balance snapshot was created, 3 vouchers posted within the date range.
+      Recalculating may change balances for 2 GL accounts.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Why did GL account 4010 change from last period to this period
+  assertions:
+  - text: Using USMF Jan 2026 vs Dec 2025. The change is driven by 4 vouchers totaling 310,000. Here are the vouchers and
+      sources.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Walk me through what happened on GL account 1305 this period
+  assertions:
+  - text: Using USMF Jan 2026. Here is the posting timeline for GL account 1305 with the key vouchers in order and their sources.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Take me from trial balance to the journal entries for GL account 1110 this period
+  assertions:
+  - text: Using USMF Jan 2026. Here are the journals linked to the vouchers contributing to GL account 1110. Opening the first
+      journal.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Show me where the balance in GL account 6100 is coming from this period
+  assertions:
+  - text: Using USMF Jan 2026. This balance is driven by vouchers V 10231 V 10455 and their journal entries. Here is the standard
+      drill path and the top links.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Open the source documents for the largest postings to GL account 2010 this period
+  assertions:
+  - text: Using USMF Jan 2026. The three largest postings to GL account 2010 come from vendor invoices INV 04521 INV 04534
+      and a journal adjustment. Opening INV 04521.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: My trial balance does not balance for this period, what should I check first
+  assertions:
+  - text: Using USMF Jan 2026. I found 1 unposted journal dated in this period and 1 batch posting error. These are the first
+      items to review because they can explain discrepancies between expected and calculated balances.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Before I recalculate, what do I need to verify for this period
+  assertions:
+  - text: Using USMF Jan 2026. Verify there are no unposted journals dated in this period and no batch posting errors. Here
+      are the items currently open.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Is there a posting failure affecting this period
+  assertions:
+  - text: Using USMF Jan 2026. Yes. A batch job ended with errors for journal GEN 04512. This journal is not fully posted
+      and should be reviewed before recalculating trial balance.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: For audit, what trial balance snapshot should I reference for this period
+  assertions:
+  - text: Using USMF Jan 2026. The most recent trial balance snapshot for this period is snapshot ID TB 2026 01 created Jan
+      31 6 14 PM. It uses Current posting layer and Main account dimension set.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: What posted after the last trial balance snapshot for this period
+  assertions:
+  - text: Using USMF Jan 2026. Since the snapshot created Jan 31 6 14 PM, 3 vouchers posted within the date range. Here are
+      the vouchers and impacted GL accounts.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Show me the journal entries for vouchers 000123 and 000124
+  assertions:
+  - text: Using USMF Jan 2026. Here are the journal entries linked to vouchers 000123 and 000124. Opening the first journal.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy
+- query: Give me a reconciliation summary for GL account 1110 for this period
+  assertions:
+  - text: Using USMF Jan 2026. GL account 1110 ending balance is X. Key drivers are the top 5 vouchers listed. This summary
+      is based on the latest trial balance snapshot created Jan 31 6 14 PM.
+    level: critical
+  tags:
+  - groundedness
+  - task_completion
+  - tool_accuracy

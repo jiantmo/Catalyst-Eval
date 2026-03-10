@@ -1,0 +1,44 @@
+- query: What percent of YTD expense is represented by the single largest invoice? Current date is March 3, 2026.
+  assertions:
+  - text: Largest invoice 4,200.00 divided by YTD 64,495.00 equals 6.5 percent
+    level: critical
+
+- query: What is the cumulative expense total through January 15, 2026?
+  assertions:
+  - text: Expenses from Jan 1-15 total 8,000.00
+    level: critical
+
+- query: What is the cumulative Training expense variance between January 31 and February 28, 2026?
+  assertions:
+  - text: Training increased from 5,070.00 to 15,095.00 resulting in 10,025.00 increase entirely driven by February postings
+    level: critical
+
+- query: What is the variance in Training Expense between the first half and second half of February 2026?
+  assertions:
+  - text: Training from Feb 16-28 equals 4,200.00 versus 5,825.00 from Feb 1-15 resulting in second half being 1,625.00 lower
+    level: critical
+
+- query: What is the total expense recorded between January 22 and January 31, 2026?
+  assertions:
+  - text: Total expense from Jan 22-31 equals 11,250.00
+    level: critical
+
+- query: Which account experienced the largest single week-over-week increase in February 2026?
+  assertions:
+  - text: Week Feb 8-14 totals 10,525.00 versus Feb 1-7 totals 7,750.00 resulting in increase of 2,775.00 primarily driven by 601600 which increased 1,950.00 week over week
+    level: critical
+
+- query: What is the total January 2026 expense excluding the largest invoice?
+  assertions:
+  - text: Jan total 25,070.00 minus 3,200.00 equals 21,870.00
+    level: critical
+
+- query: What is the difference between first half January and first half February 2026 expenses?
+  assertions:
+  - text: Jan 1-15 totals 8,000.00 and Feb 1-15 totals 18,275.00 so February is higher by 10,275.00
+    level: critical
+
+- query: How much of February 2026 expense was recorded before February 12 and what accounts drove it?
+  assertions:
+  - text: Feb 1-11 totals 12,400.00 comprised of 7,200.00 Promotional, 3,100.00 Training, and 2,100.00 Insurance. This equals 31.5 percent of the full February total 39,425.00
+    level: critical
